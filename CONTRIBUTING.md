@@ -2,9 +2,9 @@
 
 Use this workflow for every new iOwn app. Do **not** invent data practices. Audit the app source first, then write the policy.
 
-**Repository:** `divakar-baskaran/iown-apps-privacy-policies`  
-**Git remote (local):** `git@github-personal:divakar-baskaran/iown-apps-privacy-policies.git`  
-**GitHub Pages base:** `https://divakar-baskaran.github.io/iown-apps-privacy-policies/`
+**Repository:** `iown-apps/iown-apps-privacy-policies`  
+**Git remote (local):** `git@github-personal:iown-apps/iown-apps-privacy-policies.git`  
+**GitHub Pages base:** `https://iown-apps.github.io/iown-apps-privacy-policies/`
 
 ---
 
@@ -136,8 +136,8 @@ Only commit when you intend to publish. Do not commit secrets, keystores, or API
 
 After Pages is enabled on `main` / root:
 
-- https://divakar-baskaran.github.io/iown-apps-privacy-policies/
-- https://divakar-baskaran.github.io/iown-apps-privacy-policies/new-app-privacy-policy/
+- https://iown-apps.github.io/iown-apps-privacy-policies/
+- https://iown-apps.github.io/iown-apps-privacy-policies/new-app-privacy-policy/
 
 ### 9. Google Play Console
 
@@ -206,5 +206,6 @@ Copy into a new `index.html` and replace every `VERIFY:` note after auditing.
 
 | Page | URL |
 |------|-----|
-| Home | https://divakar-baskaran.github.io/iown-apps-privacy-policies/ |
-| QR Scanner | https://divakar-baskaran.github.io/iown-apps-privacy-policies/iown-qr-privacy-policy/ |
+| Home | https://iown-apps.github.io/iown-apps-privacy-policies/ |
+| QR Scanner | https://iown-apps.github.io/iown-apps-privacy-policies/iown-qr-privacy-policy/ |
+| app-ads.txt | https://iown-apps.github.io/iown-apps-privacy-policies/app-ads.txt |
