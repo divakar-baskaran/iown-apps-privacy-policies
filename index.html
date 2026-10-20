@@ -6,69 +6,113 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <title>iOwn Apps — Thoughtful mobile applications</title>
     <meta
       name="description"
-      content="Privacy policies for iOwn apps, including iOwn QR &amp; Barcode Scanner."
+      content="iOwn Apps builds practical mobile applications designed to make everyday tasks simpler, more productive, and more accessible."
     />
     <meta name="theme-color" content="#07111F" />
-    <title>iOwn Apps — Privacy &amp; Data Protection</title>
-    <link rel="icon" type="image/png" href="assets/images/iown-qr-icon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta property="og:title" content="iOwn Apps" />
+    <meta
+      property="og:description"
+      content="Thoughtful Apps. Simple Experiences. Practical mobile software from iOwn Apps."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://iown-apps.github.io/iown-apps-web-page/"
+    />
+    <meta
+      property="og:image"
+      content="https://iown-apps.github.io/iown-apps-web-page/assets/images/iown-qr-icon.png"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
-  <body data-asset-base="assets/">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="site-header__inner">
-        <a class="brand" href="./" aria-label="iOwn privacy policies home">
+      <div class="container site-header__inner">
+        <a class="brand" href="#home" aria-label="iOwn Apps home">
           <img
-            class="brand__icon"
+            class="brand__mark"
             src="assets/images/iown-qr-icon.png"
-            width="40"
-            height="40"
+            width="34"
+            height="34"
             alt=""
           />
-          <span class="brand__text">
-            <span class="brand__name">iOwn</span>
-            <span class="brand__meta">Privacy policies</span>
-          </span>
+          <span class="brand__text">iOwn Apps</span>
         </a>
-        <nav class="header-nav" aria-label="Primary">
-          <a href="#policies">Policies</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="container">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__badge-row">
-          <img
-            class="hero__logo"
-            src="assets/images/iown-qr-icon.png"
-            width="64"
-            height="64"
-            alt=""
-          />
-          <p class="hero__eyebrow">iOwn Apps</p>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div>
+            <p class="hero__eyebrow">iOwn Apps</p>
+            <h1 id="hero-title">Thoughtful Apps. Simple Experiences.</h1>
+            <p class="hero__lead">
+              iOwn Apps builds practical mobile applications designed to make
+              everyday tasks simpler, more productive, and more accessible.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#apps">Explore Apps</a>
+              <a class="btn btn--secondary" href="#privacy">Privacy &amp; Support</a>
+            </div>
+          </div>
+
+          <aside class="hero__panel" aria-label="Featured apps">
+            <p class="hero__panel-title">Applications</p>
+            <ul class="hero__apps">
+              <li>
+                <img
+                  src="assets/images/iown-qr-icon.png"
+                  width="38"
+                  height="38"
+                  alt=""
+                />
+                <span>iOwn QR &amp; Barcode Scanner</span>
+              </li>
+            </ul>
+          </aside>
         </div>
-        <h1 id="hero-title">Privacy &amp; Data Protection</h1>
-        <p>
-          This site hosts the privacy policies for iOwn applications. Each app
-          has its own independently accessible policy page based on that app’s
-          actual data practices.
-        </p>
       </section>
 
-      <section class="apps-section" id="policies" aria-labelledby="policies-title">
-        <h2 id="policies-title">Available policies</h2>
-        <p class="apps-section__intro">
-          Only published, ready-to-use policies are listed here.
-        </p>
-        <ul class="app-grid" id="app-grid">
-          <!-- Populated from apps-registry.js; noscript fallback below -->
-          <noscript>
-            <li>
-              <a class="app-card" href="iown-qr-privacy-policy/">
+      <section class="section section--alt" id="apps" aria-labelledby="apps-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="apps-title">Apps</h2>
+            <p>
+              Practical mobile tools from iOwn Apps. More applications will be
+              listed here as they are ready to publish.
+            </p>
+          </div>
+
+          <ul class="app-grid">
+            <li class="app-card">
+              <div class="app-card__top">
                 <img
                   class="app-card__icon"
                   src="assets/images/iown-qr-icon.png"
@@ -76,29 +120,103 @@
                   height="52"
                   alt="iOwn QR &amp; Barcode Scanner icon"
                 />
-                <div class="app-card__body">
+                <div>
                   <h3>iOwn QR &amp; Barcode Scanner</h3>
-                  <p>
-                    Scan, create, customise, and share QR codes and barcodes.
-                    History stays on your device.
-                  </p>
-                  <span class="app-card__cta">Read Privacy Policy →</span>
+                  <p class="app-card__status">Published privacy policy</p>
                 </div>
+              </div>
+              <p class="app-card__desc">
+                Scan QR codes and barcodes, create customized codes, and manage
+                scan history.
+              </p>
+              <div class="app-card__actions">
+                <a class="app-card__link" href="iown-qr-privacy-policy/"
+                  >Privacy policy</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="about-title">About</h2>
+          </div>
+          <div class="prose">
+            <p>
+              iOwn Apps is an independent app-development brand focused on
+              useful, user-friendly mobile software. Each product is designed to
+              solve a clear everyday need with a calm interface and
+              straightforward controls.
+            </p>
+            <p>
+              We prioritise clarity, on-device utility where it matters, and
+              transparent documentation of how each application handles data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--alt"
+        id="privacy"
+        aria-labelledby="privacy-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 id="privacy-title">Privacy and transparency</h2>
+            <p>
+              Privacy practices and permissions vary by application and are
+              documented in each app’s privacy policy.
+            </p>
+          </div>
+
+          <ul class="privacy-list">
+            <li>
+              <a href="iown-qr-privacy-policy/">
+                <span>iOwn QR &amp; Barcode Scanner</span>
+                <span class="meta">View policy</span>
               </a>
             </li>
-          </noscript>
-        </ul>
+          </ul>
+
+          <p class="prose" style="margin-top: 1.25rem">
+            All policies:
+            <a href="privacy/">Privacy policies directory</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="contact-title">Contact</h2>
+            <p>For support and privacy questions about iOwn Apps products.</p>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card__label">Email</span>
+            <a href="mailto:iownapps.26@gmail.com">iownapps.26@gmail.com</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p>© iOwn. Privacy policies for current and future iOwn apps.</p>
-        <a href="iown-qr-privacy-policy/">QR Scanner Privacy Policy</a>
+      <div class="container site-footer__inner">
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="privacy/">Privacy Policies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <p>© <span id="year"></span> iOwn Apps. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="assets/js/apps-registry.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
   </body>
 </html>
