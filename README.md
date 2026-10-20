@@ -5,15 +5,26 @@ Static website hosting privacy policies for **iOwn** applications.
 This repository is designed for **GitHub Pages** so each app can keep a stable, independently accessible privacy policy URL without creating a separate repository per app.
 
 **Git remote (authoritative):** `iown-apps/iown-apps-privacy-policies`  
-**GitHub Pages base:** https://iown-apps.github.io/iown-apps-privacy-policies/
+**This repo’s GitHub Pages (project site):** https://iown-apps.github.io/iown-apps-privacy-policies/
 
-## Published pages
+### Developer homepage vs this repository
+
+| Goal URL | Achievable from this repo? |
+|----------|----------------------------|
+| `https://iown-apps.github.io/` | **No** — requires a separate user/org site repo named `iown-apps.github.io` |
+| `https://iown-apps.github.io/app-ads.txt` | **No** — same; must live at the root of `iown-apps.github.io` |
+| `https://iown-apps.github.io/iown-apps-privacy-policies/…` | **Yes** — this project site |
+
+A ready-to-copy developer website (homepage + root `app-ads.txt`) is in [`developer-site/`](./developer-site/). See [`developer-site/README.md`](./developer-site/README.md) for deploy steps. **Do not rename** this privacy-policies repository.
+
+## Published pages (this project site)
 
 | App | Local path | Expected GitHub Pages URL |
 |-----|------------|---------------------------|
 | Directory (home) | [`index.html`](./index.html) | https://iown-apps.github.io/iown-apps-privacy-policies/ |
 | iOwn QR & Barcode Scanner | [`iown-qr-privacy-policy/`](./iown-qr-privacy-policy/) | https://iown-apps.github.io/iown-apps-privacy-policies/iown-qr-privacy-policy/ |
-| AdMob `app-ads.txt` | [`app-ads.txt`](./app-ads.txt) | https://iown-apps.github.io/iown-apps-privacy-policies/app-ads.txt |
+| AdMob `app-ads.txt` (project path) | [`app-ads.txt`](./app-ads.txt) | https://iown-apps.github.io/iown-apps-privacy-policies/app-ads.txt |
+| **Developer site package** | [`developer-site/`](./developer-site/) | Intended root: https://iown-apps.github.io/ and https://iown-apps.github.io/app-ads.txt |
 
 Only apps listed in [`assets/js/apps-registry.js`](./assets/js/apps-registry.js) with `status: "published"` appear on the homepage.
 
@@ -21,17 +32,17 @@ Only apps listed in [`assets/js/apps-registry.js`](./assets/js/apps-registry.js)
 
 ```text
 iown-apps-privacy-policies/
-├── index.html                          # Homepage / app directory
-├── app-ads.txt                         # AdMob authorised sellers (repo root)
-├── assets/
-│   ├── css/styles.css                  # Shared design system
-│   ├── js/apps-registry.js             # Published app registry
-│   ├── js/main.js                      # TOC + homepage rendering
-│   ├── fonts/                          # Bundled fonts (Sora)
-│   └── images/                         # Shared icons / wordmarks
+├── index.html                          # Privacy policies directory
+├── app-ads.txt                         # AdMob sellers (project-site path only)
+├── developer-site/                     # Copy into iown-apps.github.io for root URLs
+│   ├── index.html
+│   ├── app-ads.txt
+│   ├── assets/
+│   └── README.md
+├── assets/                             # Shared assets for privacy pages
 ├── iown-qr-privacy-policy/
 │   └── index.html
-├── docs/audits/                        # Internal source-code audits
+├── docs/audits/
 ├── CONTRIBUTING.md
 └── README.md
 ```
@@ -50,10 +61,16 @@ iown-apps-privacy-policies/
 
 ### After you push and GitHub Pages deploys
 
-1. Open: https://iown-apps.github.io/iown-apps-privacy-policies/app-ads.txt
-2. Confirm the response is **plain text** (not an HTML 404 page) and matches the entry above.
-3. Wait **at least 24 hours** for AdMob to crawl the file.
-4. In AdMob: open your app → **app-ads.txt** tab → check status.
+**Project-site file (this repo):**  
+https://iown-apps.github.io/iown-apps-privacy-policies/app-ads.txt
+
+**Preferred AdMob root file (after deploying `developer-site/` to `iown-apps.github.io`):**  
+https://iown-apps.github.io/app-ads.txt
+
+1. Confirm the response is **plain text** (not an HTML 404 page) and matches the entry above.
+2. Wait **at least 24 hours** for AdMob to crawl the file.
+3. In AdMob: open your app → **app-ads.txt** tab → check status.
+4. Set the developer website in Play Console / AdMob to the host you want crawled (for root `app-ads.txt`, use `https://iown-apps.github.io/`).
 
 ### Adding more authorised seller lines
 
